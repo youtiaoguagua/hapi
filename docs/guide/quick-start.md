@@ -52,6 +52,7 @@ Enter your access token to log in.
 
 ## Next steps
 
+- [Seamless Handoff](/guide/how-it-works#seamless-handoff) - Switch between terminal and phone seamlessly
 - [Remote access](/guide/installation#remote-access) - Access HAPI from anywhere
 - [Notifications](/guide/installation#telegram-setup) - Set up Telegram notifications
 - [Install the app](/guide/pwa) - Add HAPI to your home screen

@@ -166,3 +166,56 @@ For remote access outside your local network:
 - **Cloudflare Tunnel** (recommended) - Free, secure, reliable
 - **Tailscale** - Mesh VPN for private networks
 - **ngrok** - Quick setup for testing
+
+## Seamless Handoff
+
+HAPI's defining feature is the ability to seamlessly hand off control between local terminal and remote devices without losing session state.
+
+### Local Mode
+
+When working in local mode, you have the full terminal experience — it is native Claude Code or Codex:
+
+- Direct keyboard input with instant response
+- Full terminal UI with syntax highlighting
+- Best for focused, uninterrupted coding sessions
+- All AI processing happens locally on your machine
+
+### Remote Mode
+
+Switch to remote mode when you need to step away:
+
+- Control via Web/PWA/Telegram from any device
+- Approve permissions on the go
+- Monitor progress while away from your desk
+- Session continues running on your local machine
+
+### How Switching Works
+
+```
+┌─────────────────┐                    ┌─────────────────┐
+│   Local Mode    │◄──────────────────►│   Remote Mode   │
+│   (Terminal)    │                    │   (Phone/Web)   │
+└─────────────────┘                    └─────────────────┘
+        │                                      │
+        │  ┌────────────────────────────┐      │
+        └─►│  Same Session, Same State  │◄─────┘
+           └────────────────────────────┘
+```
+
+**Local → Remote:**
+- Receive a message from phone/web
+- Session automatically switches to remote mode
+- Terminal shows "Remote mode - waiting for input"
+
+**Remote → Local:**
+- Press double-space in terminal
+- Instantly regain local control
+- Continue typing as if you never left
+
+### Use Cases
+
+1. **Remote Control While Away** - Start a session at your desk, continue from your phone during commute or coffee break
+
+2. **Permission Approval** - AI requests file access, you get notified on phone, approve with one tap, session continues
+
+3. **Multi-Device Collaboration** - View session progress on your phone while your desktop does the heavy lifting
